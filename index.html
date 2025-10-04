@@ -3,92 +3,196 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StarStoree - Jual Beli Akun Game</title>
+  <title>STAR STORE</title>
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      color: white;
-      text-align: center;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
       margin: 0;
       padding: 0;
     }
     header {
-      padding: 40px 20px;
-      background: rgba(0,0,0,0.4);
+      text-align: center;
+      padding: 30px 20px;
     }
     header img {
-      width: 180px;
-      border-radius: 20px;
-      margin-bottom: 15px;
-      box-shadow: 0 0 20px rgba(56,189,248,0.8);
+      width: 120px;
+      margin-bottom: 10px;
     }
-    header h1 {
-      font-size: 45px;
-      color: #38bdf8;
+    h1 {
+      font-size: 2.5rem;
       margin: 10px 0;
-      text-shadow: 0 0 10px #38bdf8;
     }
-    header p {
-      font-size: 18px;
-      color: #cbd5e1;
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
     }
-    .container {
-      padding: 40px 20px;
+    .produk {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
     }
-    .btn {
+    .card {
+      background: #1e293b;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .card h2 {
+      margin-top: 0;
+      font-size: 1.6rem;
+      margin-bottom: 15px;
+      color: #38bdf8;
+    }
+    .card ul {
+      list-style: none;
+      padding: 0;
+    }
+    .card li {
+      padding: 8px;
+      border-bottom: 1px solid #334155;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .card li:hover {
+      background: #334155;
+    }
+    .card li:last-child {
+      border-bottom: none;
+    }
+    .kontak {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .kontak a {
       display: inline-block;
-      padding: 15px 30px;
-      margin: 15px;
+      margin: 10px;
+      padding: 12px 20px;
+      border-radius: 8px;
+      background: #22c55e;
       color: white;
       text-decoration: none;
-      border-radius: 12px;
-      font-size: 20px;
       font-weight: bold;
       transition: 0.3s;
     }
-    .wa {
-      background: #25D366;
-      box-shadow: 0 0 10px #25D366;
+    .kontak a.telegram {
+      background: #3b82f6;
     }
-    .wa:hover {
-      background: #1ebe57;
+    .kontak a:hover {
+      opacity: 0.9;
     }
-    .tg {
-      background: #0088cc;
-      box-shadow: 0 0 10px #0088cc;
+
+    /* Popup */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.7);
+      justify-content: center;
+      align-items: center;
     }
-    .tg:hover {
-      background: #0077b5;
+    .popup-content {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      max-width: 400px;
     }
-    footer {
-      margin-top: 40px;
-      padding: 15px;
-      background: rgba(0,0,0,0.4);
-      font-size: 14px;
-      color: #94a3b8;
+    .popup h3 {
+      margin-top: 0;
+      color: #38bdf8;
+    }
+    .popup .btn {
+      display: inline-block;
+      margin: 10px 5px;
+      padding: 10px 15px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #fff;
+    }
+    .btn-wa { background: #22c55e; }
+    .btn-tg { background: #3b82f6; }
+    .close {
+      background: red;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      margin-top: 15px;
+      cursor: pointer;
+      border-radius: 6px;
     }
   </style>
 </head>
 <body>
-  <!-- HEADER -->
+
   <header>
-    <!-- Gambar logo/banner -->
-    <img src="images/logo.png" alt="Logo StarStore">
+    <img src="logo.png" alt="Logo Star Store">
     <h1>STAR STORE</h1>
-    <p>Tempat Jual Beli Akun Game Terpercaya</p>
+    <p>Tempat jual beli game online terpercaya</p>
   </header>
 
-  <!-- MAIN CONTENT -->
-  <div class="container">
-    <h2>Hubungi Admin Langsung</h2>
-    <a class="btn wa" href="https://wa.me/6289525745610" target="_blank">💬 WhatsApp</a>
-    <a class="btn tg" href="https://t.me/starrstr" target="_blank">📩 Telegram</a>
+  <section class="produk">
+
+    <div class="card">
+      <h2>Panel Pterodactyl</h2>
+      <ul>
+        <li onclick="showPopup('1 GB → 1K')">1 GB → 1K</li>
+        <li onclick="showPopup('2 GB → 1.5K')">2 GB → 1.5K</li>
+        <li onclick="showPopup('3 GB → 2K')">3 GB → 2K</li>
+        <li onclick="showPopup('4 GB → 2.5K')">4 GB → 2.5K</li>
+        <li onclick="showPopup('5 GB → 3K')">5 GB → 3K</li>
+        <li onclick="showPopup('6 GB → 3.5K')">6 GB → 3.5K</li>
+        <li onclick="showPopup('7 GB → 4K')">7 GB → 4K</li>
+        <li onclick="showPopup('8 GB → 4.5K')">8 GB → 4.5K</li>
+        <li onclick="showPopup('9 GB → 5K')">9 GB → 5K</li>
+        <li onclick="showPopup('10 GB → 5K')">10 GB → 5K</li>
+        <li onclick="showPopup('Unli → 7K (Nego)')">Unli → 7K (Nego)</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>APK Bug</h2>
+      <ul>
+        <li onclick="showPopup('Akses Permanen → 15K')">Akses Permanen → 15K</li>
+        <li onclick="showPopup('Akses Sebulan → 25K')">Akses Sebulan → 25K</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Jasa Admin MC</h2>
+      <ul>
+        <li onclick="showPopup('MC BT → Fee 10K')">MC BT → Fee 10K</li>
+        <li onclick="showPopup('MC Biasa → Fee 2K')">MC Biasa → Fee 2K</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <!-- Popup -->
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <h3 id="popup-title"></h3>
+      <p>Ingin order produk ini? Hubungi admin:</p>
+      <a href="https://wa.me/6289525745610" target="_blank" class="btn btn-wa">WhatsApp</a>
+      <a href="https://t.me/starrstr" target="_blank" class="btn btn-tg">Telegram</a>
+      <br>
+      <button class="close" onclick="closePopup()">Tutup</button>
+    </div>
   </div>
 
-  <!-- FOOTER -->
-  <footer>
-    © 2025 StarStoree | All Rights Reserved
-  </footer>
+  <script>
+    function showPopup(item) {
+      document.getElementById("popup-title").innerText = item;
+      document.getElementById("popup").style.display = "flex";
+    }
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+  </script>
+
 </body>
-  </html>
+</html>
