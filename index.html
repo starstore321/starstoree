@@ -7,192 +7,83 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #f8fafc;
-      margin: 0;
-      padding: 0;
-    }
-    header {
+      background: #111;
+      color: white;
       text-align: center;
-      padding: 30px 20px;
+      padding: 20px;
     }
     header img {
       width: 120px;
+      height: auto;
       margin-bottom: 10px;
     }
-    h1 {
-      font-size: 2.5rem;
-      margin: 10px 0;
-    }
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-    }
     .produk {
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
-    }
-    .card {
-      background: #1e293b;
-      margin-bottom: 20px;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-    .card h2 {
-      margin-top: 0;
-      font-size: 1.6rem;
-      margin-bottom: 15px;
-      color: #38bdf8;
-    }
-    .card ul {
-      list-style: none;
-      padding: 0;
-    }
-    .card li {
-      padding: 8px;
-      border-bottom: 1px solid #334155;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    .card li:hover {
-      background: #334155;
-    }
-    .card li:last-child {
-      border-bottom: none;
+      background: #222;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 20px auto;
+      max-width: 400px;
+      text-align: left;
     }
     .kontak {
-      text-align: center;
-      margin: 40px 0;
+      margin-top: 20px;
     }
-    .kontak a {
+    .btn {
       display: inline-block;
       margin: 10px;
       padding: 12px 20px;
       border-radius: 8px;
-      background: #22c55e;
       color: white;
       text-decoration: none;
       font-weight: bold;
-      transition: 0.3s;
     }
-    .kontak a.telegram {
-      background: #3b82f6;
-    }
-    .kontak a:hover {
-      opacity: 0.9;
-    }
-
-    /* Popup */
-    .popup {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.7);
-      justify-content: center;
-      align-items: center;
-    }
-    .popup-content {
-      background: #1e293b;
-      padding: 20px;
-      border-radius: 12px;
-      text-align: center;
-      max-width: 400px;
-    }
-    .popup h3 {
-      margin-top: 0;
-      color: #38bdf8;
-    }
-    .popup .btn {
-      display: inline-block;
-      margin: 10px 5px;
-      padding: 10px 15px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      color: #fff;
-    }
-    .btn-wa { background: #22c55e; }
-    .btn-tg { background: #3b82f6; }
-    .close {
-      background: red;
-      color: white;
-      border: none;
-      padding: 8px 12px;
-      margin-top: 15px;
-      cursor: pointer;
-      border-radius: 6px;
-    }
+    .wa { background: #25D366; }
+    .tg { background: #0088cc; }
   </style>
 </head>
 <body>
 
-  <header style="text-align:center; padding:20px;">
-  <img src="20251003_221405.png" alt="Logo JB" style="width:120px; height:auto; margin-bottom:10px;">
-  <h1>STAR STORE</h1>
-  <p>Tempat jual beli game online terpercaya</p>
+  <header>
+    <img src="20251003_221405.png" alt="Logo JB">
+    <h1>STAR STORE</h1>
+    <p>Tempat jual beli game online terpercaya</p>
   </header>
 
-  <section class="produk">
+  <div class="produk">
+    <h2>Daftar Produk</h2>
+    <p><b>List panel pterodactyl:</b><br>
+    1GB 1K<br>
+    2GB 1.5K<br>
+    3GB 2K<br>
+    4GB 2.5K<br>
+    5GB 3K<br>
+    6GB 3.5K<br>
+    7GB 4K<br>
+    8GB 4.5K<br>
+    9GB 5K<br>
+    10GB 5K<br>
+    Unli 7K (nego)</p>
 
-    <div class="card">
-      <h2>Panel Pterodactyl</h2>
-      <ul>
-        <li onclick="showPopup('1 GB → 1K')">1 GB → 1K</li>
-        <li onclick="showPopup('2 GB → 1.5K')">2 GB → 1.5K</li>
-        <li onclick="showPopup('3 GB → 2K')">3 GB → 2K</li>
-        <li onclick="showPopup('4 GB → 2.5K')">4 GB → 2.5K</li>
-        <li onclick="showPopup('5 GB → 3K')">5 GB → 3K</li>
-        <li onclick="showPopup('6 GB → 3.5K')">6 GB → 3.5K</li>
-        <li onclick="showPopup('7 GB → 4K')">7 GB → 4K</li>
-        <li onclick="showPopup('8 GB → 4.5K')">8 GB → 4.5K</li>
-        <li onclick="showPopup('9 GB → 5K')">9 GB → 5K</li>
-        <li onclick="showPopup('10 GB → 5K')">10 GB → 5K</li>
-        <li onclick="showPopup('Unli → 7K (Nego)')">Unli → 7K (Nego)</li>
-      </ul>
-    </div>
+    <p><b>Paket:</b><br>
+    Panel + SC Bug 6K<br>
+    Panel Unli</p>
 
-    <div class="card">
-      <h2>APK Bug</h2>
-      <ul>
-        <li onclick="showPopup('Akses Permanen → 25k')">Akses Permanen → 25K</li>
-        <li onclick="showPopup('Akses Sebulan → 15K')">Akses Sebulan → 15K</li>
-      </ul>
-    </div>
+    <p><b>APK Bug:</b><br>
+    Akses permanen 25K<br>
+    Akses sebulan 15K</p>
 
-    <div class="card">
-      <h2>Jasa Admin MC</h2>
-      <ul>
-        <li onclick="showPopup('MC BT → Fee 10K')">MC BT → Fee 10K</li>
-        <li onclick="showPopup('MC Biasa → Fee 2K')">MC Biasa → Fee 2K</li>
-      </ul>
-    </div>
-
-  </section>
-
-  <!-- Popup -->
-  <div class="popup" id="popup">
-    <div class="popup-content">
-      <h3 id="popup-title"></h3>
-      <p>Ingin order produk ini? Hubungi admin:</p>
-      <a href="https://wa.me/6289525745610" target="_blank" class="btn btn-wa">WhatsApp</a>
-      <a href="https://t.me/starrstr" target="_blank" class="btn btn-tg">Telegram</a>
-      <br>
-      <button class="close" onclick="closePopup()">Tutup</button>
-    </div>
+    <p><b>Jasa Admin MC:</b><br>
+    MC BT Fee 10K<br>
+    MC Biasa Fee 2K</p>
   </div>
 
-  <script>
-    function showPopup(item) {
-      document.getElementById("popup-title").innerText = item;
-      document.getElementById("popup").style.display = "flex";
-    }
-    function closePopup() {
-      document.getElementById("popup").style.display = "none";
-    }
-  </script>
+  <div class="kontak">
+    <h3>MINAT?? SUNG PM ADMIN</h3>
+    <a href="https://wa.me/6289525745610?text=Halo%20kak%20starr%2C%20saya%20mau%20order%20produk%20StarStore" 
+       class="btn wa" target="_blank">WhatsApp</a>
+    <a href="https://t.me/starrstr" 
+       class="btn tg" target="_blank">Telegram</a>
+  </div>
 
 </body>
 </html>
