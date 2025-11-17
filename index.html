@@ -1,247 +1,120 @@
-<!doctype html>
-
-<html lang="id">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>STAR STORE — Tempat Jual Beli Game Online</title>
-  <style>
-    :root {
-      --bg: #050a18;
-      --card: #0d1428;
-      --accent: #00ffff;
-      --muted: #9aa4b2;
-      --neon-pink: #ff00ff;
-      --neon-blue: #00ffff;
-    }* { box-sizing: border-box; }
-
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  color: #e6eef8;
-  background: radial-gradient(circle at top left, #030818, #000);
-  -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
-}
-
-.wrap {
-  max-width: 760px;
-  margin: 36px auto;
-  padding: 20px;
-}
-
-header {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.logo {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: radial-gradient(circle, var(--neon-blue), var(--neon-pink));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 800;
-  color: #000;
-  font-size: 22px;
-  box-shadow: 0 0 25px var(--neon-blue), 0 0 50px var(--neon-pink);
-  animation: pulse 2s infinite alternate;
-}
-
-@keyframes pulse {
-  from { box-shadow: 0 0 15px var(--neon-blue), 0 0 25px var(--neon-pink); }
-  to { box-shadow: 0 0 30px var(--neon-blue), 0 0 60px var(--neon-pink); }
-}
-
-h1 {
-  margin: 0;
-  font-size: 36px;
-  letter-spacing: 2px;
-  text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-pink), 0 0 30px var(--neon-blue);
-  color: white;
-  font-weight: 800;
-  text-align: center;
-}
-
-p.lead {
-  margin: 6px 0 18px;
-  color: var(--muted);
-  text-align: center;
-}
-
-.card {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  padding: 20px;
-  border-radius: 14px;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
-  margin-bottom: 18px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 0 25px rgba(255, 0, 255, 0.3);
-}
-
-.section-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-ul.products {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-li.prod {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px;
-  border-radius: 10px;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0));
-  margin-bottom: 8px;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
-}
-
-li.prod:hover {
-  background: rgba(0, 255, 255, 0.15);
-  transform: scale(1.02);
-}
-
-.badge {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 6px 10px;
-  border-radius: 999px;
-  font-weight: 700;
-  font-size: 13px;
-  text-transform: uppercase;
-  color: var(--neon-blue);
-}
-
-.muted-small { font-size: 13px; color: var(--muted); }
-
-footer {
-  margin-top: 18px;
-  text-align: center;
-  color: var(--muted);
-  font-size: 13px;
-}
-
-.notice {
-  background: linear-gradient(90deg, rgba(0, 255, 255, 0.1), rgba(255, 0, 255, 0.1));
-  padding: 12px;
-  border-radius: 10px;
-  color: #cde6ff;
-  margin-bottom: 12px;
-}
-
-#toTop {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: var(--neon-blue);
-  color: #000;
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-size: 22px;
-  cursor: pointer;
-  box-shadow: 0 0 20px var(--neon-blue);
-  display: none;
-  transition: 0.3s;
-}
-
-#toTop:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 30px var(--neon-pink);
-}
-
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STAR STORE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #000;
+            color: #0aff9d;
+            text-align: center;
+            padding: 20px;
+        }
+        .logo {
+            width: 200px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 35px;
+            color: #00ffd5;
+            text-shadow: 0 0 10px #00ffd5, 0 0 20px #00ffd5;
+            margin-bottom: 10px;
+        }
+        .card {
+            background: #0b0b0b;
+            border: 2px solid #00ffd5;
+            padding: 15px;
+            border-radius: 15px;
+            margin: 15px auto;
+            width: 90%;
+            max-width: 450px;
+            box-shadow: 0 0 15px #00ffd5;
+        }
+        .product-title {
+            font-size: 20px;
+            color: #00ffd5;
+            margin-bottom: 8px;
+        }
+        .price {
+            font-size: 17px;
+            color: #0aff9d;
+        }
+        .buttons a {
+            display: inline-block;
+            margin: 8px;
+            padding: 10px 18px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .wa {
+            background: #25d366;
+            color: black;
+        }
+        .tg {
+            background: #0088cc;
+            color: white;
+        }
+    </style>
 </head>
-<body>
-  <main class="wrap">
-    <header>
-      <div class="logo">SS</div>
-      <div>
-        <h1>STAR STORE</h1>
-        <p class="lead">tempat jual beli game online terpercaya</p>
-      </div>
-    </header><div class="card">
-  <div class="section-title">
-    <strong>list all produk by star store</strong>
-    <span class="muted-small">update terakhir: sekarang</span>
-  </div>
+<body><img src="https://drive.google.com/uc?export=view&id=151EyEhVaKmM_gPd7niDPNmN8voLx_cM6" class="logo">
 
-  <ul class="products">
-    <li class="prod" onclick="toWa('apk bug permanen 50k / sebulan 30k')">
-      <div>
-        <div style="font-weight:700">apk bug</div>
-        <div class="meta">permanen 50k — sebulan 30k</div>
-      </div>
-      <div class="badge">tersedia</div>
-    </li>
+<h1>JB GAME ONLINE TERPERCAYA</h1>
+<p>LIST ALL PRODUK:</p>
 
-    <li class="prod" onclick="alert('Belum ada stok 🗿')">
-      <div>
-        <div style="font-weight:700">akun game</div>
-        <div class="meta">mulai dari harga 25k sampai seterusnya<br><small class="muted-small">(belum ada stok 🗿)</small></div>
-      </div>
-      <div class="badge">stok: kosong</div>
-    </li>
-
-    <li class="prod" onclick="toWa('jasa bug 2k 1 nomor')">
-      <div>
-        <div style="font-weight:700">jasa bug</div>
-        <div class="meta">2k 1 nomor dan seterusnya — tanya sung wa (malas yapping)</div>
-      </div>
-      <div class="badge">jasa</div>
-    </li>
-
-    <li class="prod" onclick="toWa('MC biasa 2k / bt an 10k')">
-      <div>
-        <div style="font-weight:700">MC</div>
-        <div class="meta">biasa 2k — bt an 10k</div>
-      </div>
-      <div class="badge">tersedia</div>
-    </li>
-  </ul>
-
-  <div style="margin-top:10px" class="muted-small">minatt sungg pm jamin amanah 100%</div>
+<!-- APK BUG -->
+<div class="card">
+    <div class="product-title">APK BUG TOXIC AVENGER</div>
+    <div class="price">PERMANEN : 50K<br>PERBULAN : 30K</div>
+    <div class="buttons">
+        <a href="https://wa.me/6289525745610" class="wa">WhatsApp</a>
+        <a href="https://t.me/starrstr" class="tg">Telegram</a>
+    </div>
 </div>
 
-<div class="card notice">
-  <strong>saluran testi star store</strong>
-  <div style="margin-top:8px"><a href="https://whatsapp.com/channel/0029VbAzsql5Ui2YjAttNH3g" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline">https://whatsapp.com/channel/0029VbAzsql5Ui2YjAttNH3g</a></div>
+<!-- AKUN GAME -->
+<div class="card">
+    <div class="product-title">AKUN GAME FF, ML, ROBLOX</div>
+    <div class="price">(BELUM ADA STOK)</div>
+    <div class="buttons">
+        <a href="#" class="wa" onclick="alert('Belum ada stok 😭');">Cek Stok</a>
+    </div>
 </div>
 
-<footer>© STAR STORE — jual beli game online. Gunakan dengan bijak.</footer>
+<!-- JASA BIKIN LOGO -->
+<div class="card">
+    <div class="product-title">JASA BIKIN LOGO</div>
+    <div class="price">1K AJA</div>
+    <div class="buttons">
+        <a href="https://wa.me/6289525745610" class="wa">WhatsApp</a>
+        <a href="https://t.me/starrstr" class="tg">Telegram</a>
+    </div>
+</div>
 
-  </main><button id="toTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<!-- JASA MC -->
+<div class="card">
+    <div class="product-title">JASA MC</div>
+    <div class="price">DARI 2K</div>
+    <div class="buttons">
+        <a href="https://wa.me/6289525745610" class="wa">WhatsApp</a>
+        <a href="https://t.me/starrstr" class="tg">Telegram</a>
+    </div>
+</div>
 
-  <script>
-    function toWa(prod){
-      window.open(`https://wa.me/6289525745610?text=Minat%20Star%20Store%20-%20Saya%20mau%20beli%20${encodeURIComponent(prod)}`,'_blank');
-    }
+<!-- JASA MC BT -->
+<div class="card">
+    <div class="product-title">JASA MC BT</div>
+    <div class="price">DARI 10K</div>
+    <div class="buttons">
+        <a href="https://wa.me/6289525745610" class="wa">WhatsApp</a>
+        <a href="https://t.me/starrstr" class="tg">Telegram</a>
+    </div>
+</div>
 
-    const toTopBtn = document.getElementById('toTop');
-    window.onscroll = function(){
-      if(document.documentElement.scrollTop > 200){
-        toTopBtn.style.display = 'block';
-      } else {
-        toTopBtn.style.display = 'none';
-      }
-    };
-  </script></body>
+<p style="margin-top: 25px; color:#00ffd5;">UTAMAKAN WA YA, KALO C1 LEWAT TELE 💚</p>
+<p style="color:#0aff9d;">TERIMAKASIH SUDAH MENGGUNAKAN JASA STAR STORE ⭐</p>
+
+</body>
 </html>
